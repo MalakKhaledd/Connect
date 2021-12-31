@@ -15,6 +15,15 @@
 		38581834277F587500B87B04 /* ConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581833277F587500B87B04 /* ConnectUITestsLaunchTests.swift */; };
 		38581844277F62DD00B87B04 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38581843277F62DD00B87B04 /* Home.storyboard */; };
 		38581846277F62F700B87B04 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581845277F62F700B87B04 /* HomeViewController.swift */; };
+		3858184A277F698000B87B04 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581849277F698000B87B04 /* NetworkService.swift */; };
+		3858184D277F6A0800B87B04 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858184C277F6A0800B87B04 /* Room.swift */; };
+		38581850277F6BAF00B87B04 /* Rooms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3858184F277F6BAF00B87B04 /* Rooms.storyboard */; };
+		38581852277F6BC400B87B04 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581851277F6BC400B87B04 /* RoomsViewController.swift */; };
+		38581855277F97BC00B87B04 /* RoomsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581854277F97BC00B87B04 /* RoomsViewModel.swift */; };
+		38581858277F9B9B00B87B04 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581856277F9B9A00B87B04 /* RoomTableViewCell.swift */; };
+		38581859277F9B9B00B87B04 /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38581857277F9B9B00B87B04 /* RoomTableViewCell.xib */; };
+		3858185C277FA39100B87B04 /* RoomsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858185B277FA39100B87B04 /* RoomsHeaderView.swift */; };
+		3858185F277FA41E00B87B04 /* RoomsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3858185E277FA41E00B87B04 /* RoomsHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,15 @@
 		38581833277F587500B87B04 /* ConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		38581843277F62DD00B87B04 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		38581845277F62F700B87B04 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		38581849277F698000B87B04 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3858184C277F6A0800B87B04 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		3858184F277F6BAF00B87B04 /* Rooms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rooms.storyboard; sourceTree = "<group>"; };
+		38581851277F6BC400B87B04 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
+		38581854277F97BC00B87B04 /* RoomsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewModel.swift; sourceTree = "<group>"; };
+		38581856277F9B9A00B87B04 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		38581857277F9B9B00B87B04 /* RoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
+		3858185B277FA39100B87B04 /* RoomsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsHeaderView.swift; sourceTree = "<group>"; };
+		3858185E277FA41E00B87B04 /* RoomsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomsHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +117,9 @@
 			children = (
 				3858181E277F587400B87B04 /* Info.plist */,
 				38581840277F629400B87B04 /* Supporting Files */,
-				38581843277F62DD00B87B04 /* Home.storyboard */,
-				38581845277F62F700B87B04 /* HomeViewController.swift */,
+				3858184B277F699A00B87B04 /* Network */,
+				3858184E277F6A0D00B87B04 /* Models */,
+				38581848277F696000B87B04 /* Scenes */,
 			);
 			path = Connect;
 			sourceTree = "<group>";
@@ -130,6 +149,70 @@
 				3858181B277F587400B87B04 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38581847277F695700B87B04 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				38581843277F62DD00B87B04 /* Home.storyboard */,
+				38581845277F62F700B87B04 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		38581848277F696000B87B04 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				38581847277F695700B87B04 /* Home */,
+				38581853277F6BD200B87B04 /* Rooms */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3858184B277F699A00B87B04 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				38581849277F698000B87B04 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3858184E277F6A0D00B87B04 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3858184C277F6A0800B87B04 /* Room.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		38581853277F6BD200B87B04 /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				3858185D277FA39E00B87B04 /* Headers */,
+				3858185A277F9BA200B87B04 /* Cells */,
+				3858184F277F6BAF00B87B04 /* Rooms.storyboard */,
+				38581851277F6BC400B87B04 /* RoomsViewController.swift */,
+				38581854277F97BC00B87B04 /* RoomsViewModel.swift */,
+			);
+			path = Rooms;
+			sourceTree = "<group>";
+		};
+		3858185A277F9BA200B87B04 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				38581856277F9B9A00B87B04 /* RoomTableViewCell.swift */,
+				38581857277F9B9B00B87B04 /* RoomTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3858185D277FA39E00B87B04 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				3858185B277FA39100B87B04 /* RoomsHeaderView.swift */,
+				3858185E277FA41E00B87B04 /* RoomsHeaderView.xib */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,9 +319,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38581859277F9B9B00B87B04 /* RoomTableViewCell.xib in Resources */,
 				38581844277F62DD00B87B04 /* Home.storyboard in Resources */,
 				3858181D277F587400B87B04 /* LaunchScreen.storyboard in Resources */,
 				3858181A277F587400B87B04 /* Assets.xcassets in Resources */,
+				3858185F277FA41E00B87B04 /* RoomsHeaderView.xib in Resources */,
+				38581850277F6BAF00B87B04 /* Rooms.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +350,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				38581811277F586E00B87B04 /* AppDelegate.swift in Sources */,
+				3858184A277F698000B87B04 /* NetworkService.swift in Sources */,
+				38581852277F6BC400B87B04 /* RoomsViewController.swift in Sources */,
+				38581858277F9B9B00B87B04 /* RoomTableViewCell.swift in Sources */,
+				3858185C277FA39100B87B04 /* RoomsHeaderView.swift in Sources */,
+				3858184D277F6A0800B87B04 /* Room.swift in Sources */,
 				38581846277F62F700B87B04 /* HomeViewController.swift in Sources */,
+				38581855277F97BC00B87B04 /* RoomsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
