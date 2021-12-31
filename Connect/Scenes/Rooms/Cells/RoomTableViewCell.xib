@@ -26,20 +26,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb3-ov-9Wj">
-                                <rect key="frame" x="29" y="6.5" width="40" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb3-ov-9Wj">
+                                <rect key="frame" x="30" y="6.5" width="40" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="occupancy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3t-YX-bAM">
-                                <rect key="frame" x="217" y="6.5" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3t-YX-bAM">
+                                <rect key="frame" x="260" y="6.5" width="30" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oa-K5-iho">
-                                <rect key="frame" x="175.5" y="6.5" width="31.5" height="21"/>
+                                <rect key="frame" x="200" y="6.5" width="31.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -47,15 +47,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="h3t-YX-bAM" firstAttribute="leading" secondItem="1oa-K5-iho" secondAttribute="trailing" constant="10" id="UNZ-3F-QHW"/>
                             <constraint firstItem="qb3-ov-9Wj" firstAttribute="firstBaseline" secondItem="wTa-C3-egv" secondAttribute="firstBaseline" id="d5Z-AT-Oc7"/>
                             <constraint firstItem="1oa-K5-iho" firstAttribute="firstBaseline" secondItem="h3t-YX-bAM" secondAttribute="firstBaseline" id="d9r-hy-525"/>
                             <constraint firstItem="wTa-C3-egv" firstAttribute="leading" secondItem="9Ry-Ev-hW1" secondAttribute="leading" constant="5" id="nCt-1m-c2f"/>
-                            <constraint firstItem="qb3-ov-9Wj" firstAttribute="leading" secondItem="wTa-C3-egv" secondAttribute="trailing" constant="10" id="nNr-fG-pDm"/>
+                            <constraint firstItem="qb3-ov-9Wj" firstAttribute="leading" secondItem="9Ry-Ev-hW1" secondAttribute="leading" constant="30" id="nNr-fG-pDm"/>
                             <constraint firstItem="1oa-K5-iho" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qb3-ov-9Wj" secondAttribute="trailing" constant="10" id="nvo-SM-b6C"/>
-                            <constraint firstAttribute="trailing" secondItem="h3t-YX-bAM" secondAttribute="trailing" constant="5" id="pfL-6B-svO"/>
+                            <constraint firstAttribute="leading" secondItem="h3t-YX-bAM" secondAttribute="leading" constant="-260" id="pfL-6B-svO"/>
+                            <constraint firstItem="1oa-K5-iho" firstAttribute="leading" secondItem="9Ry-Ev-hW1" secondAttribute="leading" constant="200" id="wOJ-aV-NFC"/>
                             <constraint firstItem="h3t-YX-bAM" firstAttribute="firstBaseline" secondItem="qb3-ov-9Wj" secondAttribute="firstBaseline" id="whp-Yz-Zl0"/>
                             <constraint firstItem="wTa-C3-egv" firstAttribute="centerY" secondItem="9Ry-Ev-hW1" secondAttribute="centerY" id="xnV-hp-xLi"/>
+                            <constraint firstAttribute="trailing" secondItem="h3t-YX-bAM" secondAttribute="trailing" constant="10" id="zJs-vP-GCS"/>
                         </constraints>
                     </view>
                 </subviews>

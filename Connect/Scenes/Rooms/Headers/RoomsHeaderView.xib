@@ -25,19 +25,19 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bta-zh-1Hr">
-                            <rect key="frame" x="51.5" y="29.5" width="45" height="21"/>
+                            <rect key="frame" x="41.5" y="29.5" width="45" height="21"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                             <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Occupancy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l8-fF-Ihj">
-                            <rect key="frame" x="224" y="29.5" width="121.5" height="21"/>
+                            <rect key="frame" x="184" y="29.5" width="121.5" height="21"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                             <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVY-yv-DMl">
-                            <rect key="frame" x="355.5" y="29.5" width="43.5" height="21"/>
+                            <rect key="frame" x="325.5" y="29.5" width="43.5" height="21"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                             <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -55,10 +55,10 @@
                         <constraint firstItem="bta-zh-1Hr" firstAttribute="firstBaseline" secondItem="XJU-P7-Xut" secondAttribute="firstBaseline" id="0XS-hD-xio"/>
                         <constraint firstItem="XJU-P7-Xut" firstAttribute="centerY" secondItem="WA2-DS-PdM" secondAttribute="centerY" id="FUV-pD-Bw1"/>
                         <constraint firstItem="lVY-yv-DMl" firstAttribute="firstBaseline" secondItem="bta-zh-1Hr" secondAttribute="firstBaseline" id="G5g-PI-CWE"/>
-                        <constraint firstAttribute="trailing" secondItem="lVY-yv-DMl" secondAttribute="trailing" constant="15" id="GSr-4m-z96"/>
+                        <constraint firstAttribute="trailing" secondItem="lVY-yv-DMl" secondAttribute="trailing" constant="45" id="GSr-4m-z96"/>
                         <constraint firstItem="FrY-oo-Jo4" firstAttribute="leading" secondItem="WA2-DS-PdM" secondAttribute="leading" id="Jee-sb-TsM"/>
-                        <constraint firstItem="bta-zh-1Hr" firstAttribute="leading" secondItem="XJU-P7-Xut" secondAttribute="trailing" constant="20" id="UoV-EU-5jz"/>
-                        <constraint firstItem="lVY-yv-DMl" firstAttribute="leading" secondItem="9l8-fF-Ihj" secondAttribute="trailing" constant="10" id="VTH-nV-Zhz"/>
+                        <constraint firstItem="bta-zh-1Hr" firstAttribute="leading" secondItem="XJU-P7-Xut" secondAttribute="trailing" constant="10" id="UoV-EU-5jz"/>
+                        <constraint firstItem="lVY-yv-DMl" firstAttribute="leading" secondItem="9l8-fF-Ihj" secondAttribute="trailing" constant="20" id="VTH-nV-Zhz"/>
                         <constraint firstItem="XJU-P7-Xut" firstAttribute="leading" secondItem="WA2-DS-PdM" secondAttribute="leading" constant="15" id="X5Y-nj-dLd"/>
                         <constraint firstItem="9l8-fF-Ihj" firstAttribute="firstBaseline" secondItem="bta-zh-1Hr" secondAttribute="firstBaseline" id="mm7-xF-fcp"/>
                         <constraint firstAttribute="trailing" secondItem="FrY-oo-Jo4" secondAttribute="trailing" id="svu-LN-am2"/>

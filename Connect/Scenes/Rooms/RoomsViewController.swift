@@ -74,7 +74,12 @@ extension RoomsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell") as? RoomTableViewCell
         let room = rooms?[indexPath.row]
-        cell?.configure(id: room?.id ?? "", name: room?.name ?? "", maxOccupancy: "\(room?.max_occupancy ?? 0)", occupancy: "\(room?.is_occupied ?? false)")
+        cell?.configure(
+            id: room?.id ?? "",
+            name: room?.name ?? "",
+            maxOccupancy: "\(room?.max_occupancy ?? 0)",
+            occupancy: viewModel?.appropriateOccupancyStatus(isOccupied: room?.is_occupied ?? false) ?? ""
+        )
         return cell ?? UITableViewCell()
     }
 }
