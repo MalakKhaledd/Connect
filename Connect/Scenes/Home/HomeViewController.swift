@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     @IBAction func didTapOnRooms(_ sender: UIButton) {
         let roomsStoryBoard = UIStoryboard(name: "Rooms", bundle: nil)
         let roomsViewController = roomsStoryBoard.instantiateViewController(withIdentifier: "RoomsViewController")
-        // roomsViewController.modalPresentationStyle = .fullScreen
+        roomsViewController.modalPresentationStyle = .fullScreen
         self.present(roomsViewController, animated: true)
     }
 }
