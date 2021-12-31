@@ -46,6 +46,7 @@ class RoomsViewController: UIViewController {
     
     private func configureTableView() {
         tableView.register(UINib(nibName: "RoomTableViewCell", bundle: nil), forCellReuseIdentifier: "RoomTableViewCell")
+        tableView.register(UINib(nibName: "RoomsHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "RoomsHeaderView")
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -82,6 +83,15 @@ extension RoomsViewController: UITableViewDataSource {
 
 extension RoomsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 80
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RoomsHeaderView") as? RoomsHeaderView
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 60
     }
 }

@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H5O-0f-F6y">
-                                <rect key="frame" x="0.0" y="99" width="414" height="763"/>
+                                <rect key="frame" x="0.0" y="129" width="414" height="733"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -42,7 +42,7 @@
                             <constraint firstItem="vVH-hI-T2m" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="JHV-XV-ZRd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="H5O-0f-F6y" secondAttribute="bottom" id="f5R-c5-S5I"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="H5O-0f-F6y" secondAttribute="trailing" id="hXq-g2-6wR"/>
-                            <constraint firstItem="H5O-0f-F6y" firstAttribute="top" secondItem="vVH-hI-T2m" secondAttribute="bottom" constant="10" id="i2u-4w-q3E"/>
+                            <constraint firstItem="H5O-0f-F6y" firstAttribute="top" secondItem="vVH-hI-T2m" secondAttribute="bottom" constant="40" id="i2u-4w-q3E"/>
                         </constraints>
                     </view>
                     <connections>
