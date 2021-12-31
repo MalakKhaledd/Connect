@@ -29,16 +29,25 @@
                                     <action selector="didTapCloseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="O0a-pg-8zs"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H5O-0f-F6y">
+                                <rect key="frame" x="0.0" y="99" width="414" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vVH-hI-T2m" secondAttribute="trailing" constant="20" id="3rb-1E-v9R"/>
+                            <constraint firstItem="H5O-0f-F6y" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ga6-pI-bpl"/>
                             <constraint firstItem="vVH-hI-T2m" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="JHV-XV-ZRd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="H5O-0f-F6y" secondAttribute="bottom" id="f5R-c5-S5I"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="H5O-0f-F6y" secondAttribute="trailing" id="hXq-g2-6wR"/>
+                            <constraint firstItem="H5O-0f-F6y" firstAttribute="top" secondItem="vVH-hI-T2m" secondAttribute="bottom" constant="10" id="i2u-4w-q3E"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="vVH-hI-T2m" id="2bO-Fa-xOF"/>
+                        <outlet property="tableView" destination="H5O-0f-F6y" id="gkB-Jq-1wf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
