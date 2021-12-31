@@ -27,6 +27,7 @@ class RoomsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewModel()
+        configureTableView()
         fetchRooms()
     }
     
@@ -39,6 +40,19 @@ class RoomsViewController: UIViewController {
     private func fetchRooms() {
         viewModel?.fetchRooms { [weak self] rooms, error in
             self?.rooms = rooms
+            self?.reloadTable()
+        }
+    }
+    
+    private func configureTableView() {
+        tableView.register(UINib(nibName: "RoomTableViewCell", bundle: nil), forCellReuseIdentifier: "RoomTableViewCell")
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    private func reloadTable() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
     }
 
@@ -46,5 +60,28 @@ class RoomsViewController: UIViewController {
 
     @IBAction func didTapCloseButton(_ sender: UIButton) {
         self.dismiss(animated: true)
+    }
+}
+
+// MARK: - Table View Data Source
+
+extension RoomsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return rooms?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell") as? RoomTableViewCell
+        let room = rooms?[indexPath.row]
+        cell?.configure(id: room?.id ?? "", name: room?.name ?? "", maxOccupancy: "\(room?.max_occupancy ?? 0)", occupancy: "\(room?.is_occupied ?? false)")
+        return cell ?? UITableViewCell()
+    }
+}
+
+// MARK: - Table View Delegate
+
+extension RoomsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 }
