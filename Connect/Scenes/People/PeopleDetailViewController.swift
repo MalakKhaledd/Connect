@@ -63,6 +63,13 @@ class PeopleDetailViewController: UIViewController {
         configureViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = .white
+    }
+    
+    // MARK: - Private functions
+    
     private func configureViews() {
         let person = viewModel?.people?.first { $0.id == selectedPersonID }
         if let imageURL = URL(string: person?.avatar ?? "") {

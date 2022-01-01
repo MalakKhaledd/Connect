@@ -21,6 +21,11 @@ class PeopleMasterTableViewController: UITableViewController {
         fetchPeople()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "AccentColor")
+    }
+    
     // MARK: - Private Functions
     
     private func configureTableView() {
