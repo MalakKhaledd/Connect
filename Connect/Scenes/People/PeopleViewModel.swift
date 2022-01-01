@@ -8,6 +8,8 @@
 import Foundation
 
 class PeopleViewModel {
+    var people: [Person]?
+
     func fetchPeople(completion: @escaping ([Person]?, Error?) -> Void) {
         NetworkService.shared.fetchPeople { data, response, error in
             if error == nil {
@@ -16,6 +18,7 @@ class PeopleViewModel {
                 do {
                     if response.statusCode == 200 {
                         let result = try JSONDecoder().decode([Person].self, from: data)
+                        self.people = result
                         completion(result, nil)
                     }
                 } catch {

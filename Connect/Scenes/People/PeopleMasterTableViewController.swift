@@ -71,12 +71,14 @@ class PeopleMasterTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let splitViewController = splitViewController {
-//            if splitViewController.isCollapsed {
-//                let shipmentDetailViewController = storyboard?.instantiateViewController(identifier: "shipmentDetailViewController") as! ShipmentDetailViewController
-//                shipmentDetailViewController.shipment = selectedShipment
-//                self.navigationController?.pushViewController(shipmentDetailViewController, animated: true)
-//            }
-//        }
+        let selectedPerson = people?[indexPath.row]
+        if let splitViewController = splitViewController {
+            if splitViewController.isCollapsed {
+                let personViewController = storyboard?.instantiateViewController(withIdentifier: "PeopleDetailViewController") as? PeopleDetailViewController
+                personViewController?.selectedPersonID = selectedPerson?.id ?? ""
+                personViewController?.viewModel = viewModel
+                navigationController?.pushViewController(personViewController!, animated: true)
+            }
+        }
     }
 }
