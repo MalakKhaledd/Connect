@@ -22,4 +22,13 @@ class NetworkService {
         }
         task.resume()
     }
+    
+    func fetchPeople(completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        guard let fetchPeopleURL = URL(string: baseURL + "people") else { return }
+        
+        let task = session.dataTask(with: fetchPeopleURL) { data, response, error in
+            completion(data, response, error)
+        }
+        task.resume()
+    }
 }
