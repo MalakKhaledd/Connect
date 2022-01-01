@@ -25,6 +25,10 @@
 		3858185C277FA39100B87B04 /* RoomsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858185B277FA39100B87B04 /* RoomsHeaderView.swift */; };
 		3858185F277FA41E00B87B04 /* RoomsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3858185E277FA41E00B87B04 /* RoomsHeaderView.xib */; };
 		385818612780750C00B87B04 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385818602780750C00B87B04 /* Person.swift */; };
+		38581863278076B700B87B04 /* People.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38581862278076B700B87B04 /* People.storyboard */; };
+		38581865278077A300B87B04 /* PeopleMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581864278077A300B87B04 /* PeopleMasterTableViewController.swift */; };
+		3858186827807B0100B87B04 /* PeopleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858186727807B0100B87B04 /* PeopleDetailViewController.swift */; };
+		3858186A2780872A00B87B04 /* PeopleSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385818692780872A00B87B04 /* PeopleSplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		3858185B277FA39100B87B04 /* RoomsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsHeaderView.swift; sourceTree = "<group>"; };
 		3858185E277FA41E00B87B04 /* RoomsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomsHeaderView.xib; sourceTree = "<group>"; };
 		385818602780750C00B87B04 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		38581862278076B700B87B04 /* People.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = People.storyboard; sourceTree = "<group>"; };
+		38581864278077A300B87B04 /* PeopleMasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleMasterTableViewController.swift; sourceTree = "<group>"; };
+		3858186727807B0100B87B04 /* PeopleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewController.swift; sourceTree = "<group>"; };
+		385818692780872A00B87B04 /* PeopleSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,7 @@
 			children = (
 				38581847277F695700B87B04 /* Home */,
 				38581853277F6BD200B87B04 /* Rooms */,
+				38581866278077AA00B87B04 /* People */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -216,6 +225,17 @@
 				3858185E277FA41E00B87B04 /* RoomsHeaderView.xib */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		38581866278077AA00B87B04 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				38581862278076B700B87B04 /* People.storyboard */,
+				38581864278077A300B87B04 /* PeopleMasterTableViewController.swift */,
+				3858186727807B0100B87B04 /* PeopleDetailViewController.swift */,
+				385818692780872A00B87B04 /* PeopleSplitViewController.swift */,
+			);
+			path = People;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +347,7 @@
 				3858181D277F587400B87B04 /* LaunchScreen.storyboard in Resources */,
 				3858181A277F587400B87B04 /* Assets.xcassets in Resources */,
 				3858185F277FA41E00B87B04 /* RoomsHeaderView.xib in Resources */,
+				38581863278076B700B87B04 /* People.storyboard in Resources */,
 				38581850277F6BAF00B87B04 /* Rooms.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,7 +374,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				38581811277F586E00B87B04 /* AppDelegate.swift in Sources */,
+				38581865278077A300B87B04 /* PeopleMasterTableViewController.swift in Sources */,
+				3858186A2780872A00B87B04 /* PeopleSplitViewController.swift in Sources */,
 				3858184A277F698000B87B04 /* NetworkService.swift in Sources */,
+				3858186827807B0100B87B04 /* PeopleDetailViewController.swift in Sources */,
 				38581852277F6BC400B87B04 /* RoomsViewController.swift in Sources */,
 				38581858277F9B9B00B87B04 /* RoomTableViewCell.swift in Sources */,
 				3858185C277FA39100B87B04 /* RoomsHeaderView.swift in Sources */,
