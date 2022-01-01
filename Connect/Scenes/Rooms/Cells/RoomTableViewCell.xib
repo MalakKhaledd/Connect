@@ -47,6 +47,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="qb3-ov-9Wj" firstAttribute="centerY" secondItem="9Ry-Ev-hW1" secondAttribute="centerY" id="Jez-XJ-OQQ"/>
                             <constraint firstItem="qb3-ov-9Wj" firstAttribute="firstBaseline" secondItem="wTa-C3-egv" secondAttribute="firstBaseline" id="d5Z-AT-Oc7"/>
                             <constraint firstItem="1oa-K5-iho" firstAttribute="firstBaseline" secondItem="h3t-YX-bAM" secondAttribute="firstBaseline" id="d9r-hy-525"/>
                             <constraint firstItem="wTa-C3-egv" firstAttribute="leading" secondItem="9Ry-Ev-hW1" secondAttribute="leading" constant="5" id="nCt-1m-c2f"/>
