@@ -61,6 +61,7 @@ class PeopleMasterTableViewController: UITableViewController {
             maxOccupancy: "",
             occupancy: ""
         )
+        cell?.selectionStyle = .none
         return cell ?? UITableViewCell()
     }
     
