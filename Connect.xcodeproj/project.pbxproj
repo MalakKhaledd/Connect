@@ -29,6 +29,7 @@
 		38581865278077A300B87B04 /* PeopleMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581864278077A300B87B04 /* PeopleMasterTableViewController.swift */; };
 		3858186827807B0100B87B04 /* PeopleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858186727807B0100B87B04 /* PeopleDetailViewController.swift */; };
 		3858186A2780872A00B87B04 /* PeopleSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385818692780872A00B87B04 /* PeopleSplitViewController.swift */; };
+		3858186C27808F7900B87B04 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858186B27808F7900B87B04 /* PeopleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		38581864278077A300B87B04 /* PeopleMasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleMasterTableViewController.swift; sourceTree = "<group>"; };
 		3858186727807B0100B87B04 /* PeopleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewController.swift; sourceTree = "<group>"; };
 		385818692780872A00B87B04 /* PeopleSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSplitViewController.swift; sourceTree = "<group>"; };
+		3858186B27808F7900B87B04 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				38581862278076B700B87B04 /* People.storyboard */,
+				3858186B27808F7900B87B04 /* PeopleViewModel.swift */,
 				38581864278077A300B87B04 /* PeopleMasterTableViewController.swift */,
 				3858186727807B0100B87B04 /* PeopleDetailViewController.swift */,
 				385818692780872A00B87B04 /* PeopleSplitViewController.swift */,
@@ -373,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3858186C27808F7900B87B04 /* PeopleViewModel.swift in Sources */,
 				38581811277F586E00B87B04 /* AppDelegate.swift in Sources */,
 				38581865278077A300B87B04 /* PeopleMasterTableViewController.swift in Sources */,
 				3858186A2780872A00B87B04 /* PeopleSplitViewController.swift in Sources */,
