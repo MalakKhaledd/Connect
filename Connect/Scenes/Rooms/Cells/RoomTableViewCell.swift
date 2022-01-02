@@ -16,7 +16,7 @@ class RoomTableViewCell: UITableViewCell {
     @IBOutlet weak var occupancyLabel: UILabel!
     @IBOutlet weak var containerView: UIView! {
         didSet {
-            containerView.layer.cornerRadius = 10
+            containerView.layer.cornerRadius = UIConstants.cornerRadius
         }
     }
     

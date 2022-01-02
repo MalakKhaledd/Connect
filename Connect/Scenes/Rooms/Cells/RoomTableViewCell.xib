@@ -53,8 +53,12 @@
                             <constraint firstItem="wTa-C3-egv" firstAttribute="leading" secondItem="9Ry-Ev-hW1" secondAttribute="leading" constant="5" id="nCt-1m-c2f"/>
                             <constraint firstItem="qb3-ov-9Wj" firstAttribute="leading" secondItem="9Ry-Ev-hW1" secondAttribute="leading" constant="30" id="nNr-fG-pDm"/>
                             <constraint firstItem="1oa-K5-iho" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qb3-ov-9Wj" secondAttribute="trailing" constant="10" id="nvo-SM-b6C"/>
-                            <constraint firstAttribute="leading" secondItem="h3t-YX-bAM" secondAttribute="leading" constant="-260" id="pfL-6B-svO"/>
-                            <constraint firstItem="1oa-K5-iho" firstAttribute="leading" secondItem="9Ry-Ev-hW1" secondAttribute="leading" constant="200" id="wOJ-aV-NFC"/>
+                            <constraint firstAttribute="leading" secondItem="h3t-YX-bAM" secondAttribute="leading" constant="-260" id="pfL-6B-svO">
+                                <variation key="heightClass=regular-widthClass=regular" constant="-800"/>
+                            </constraint>
+                            <constraint firstItem="1oa-K5-iho" firstAttribute="leading" secondItem="9Ry-Ev-hW1" secondAttribute="leading" constant="200" id="wOJ-aV-NFC">
+                                <variation key="heightClass=regular-widthClass=regular" constant="600"/>
+                            </constraint>
                             <constraint firstItem="h3t-YX-bAM" firstAttribute="firstBaseline" secondItem="qb3-ov-9Wj" secondAttribute="firstBaseline" id="whp-Yz-Zl0"/>
                             <constraint firstItem="wTa-C3-egv" firstAttribute="centerY" secondItem="9Ry-Ev-hW1" secondAttribute="centerY" id="xnV-hp-xLi"/>
                             <constraint firstAttribute="trailing" secondItem="h3t-YX-bAM" secondAttribute="trailing" constant="10" id="zJs-vP-GCS"/>

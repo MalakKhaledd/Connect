@@ -8,30 +8,29 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    let roomsStoryboardName = "Rooms"
+    let roomsViewCtrlIdentifier = "RoomsViewController"
+    let peopleStoryboardName = "People"
+    let peopleSplitViewCtrlIdentifier = "PeopleSplitViewController"
+    
+    // MARK: - IBActions
+    
     @IBAction func didTapOnRooms(_ sender: UIButton) {
-        let roomsStoryBoard = UIStoryboard(name: "Rooms", bundle: nil)
-        let roomsViewController = roomsStoryBoard.instantiateViewController(withIdentifier: "RoomsViewController")
+        let roomsStoryBoard = UIStoryboard(name: roomsStoryboardName, bundle: nil)
+        let roomsViewController = roomsStoryBoard.instantiateViewController(withIdentifier: roomsViewCtrlIdentifier)
         navigationController?.pushViewController(roomsViewController, animated: true)
     }
     @IBAction func didTapOnPeople(_ sender: UIButton) {
-        let container = UIViewController()
-        let peopleStoryBoard = UIStoryboard(name: "People", bundle: nil)
-        let peopleViewCtrl = peopleStoryBoard.instantiateViewController(withIdentifier: "PeopleSplitViewController")
-        container.addAsChildViewController(type: peopleViewCtrl, attached: container.view)
-        navigationController?.pushViewController(container, animated: true)
-    }
-}
-
-extension UIViewController {
-    func addAsChildViewController(type controller: UIViewController, attached toView: UIView) {
-        addChild(controller)
-        toView.addSubview(controller.view)
-        controller.view.frame = toView.bounds
-        controller.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        controller.didMove(toParent: self)
+        let containerViewCtrl = UIViewController()
+        let peopleStoryBoard = UIStoryboard(name: peopleStoryboardName, bundle: nil)
+        let peopleViewCtrl = peopleStoryBoard.instantiateViewController(withIdentifier: peopleSplitViewCtrlIdentifier)
+        containerViewCtrl.addAsChildViewController(type: peopleViewCtrl, attached: containerViewCtrl.view)
+        navigationController?.pushViewController(containerViewCtrl, animated: true)
     }
 }

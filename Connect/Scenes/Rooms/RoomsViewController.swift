@@ -10,11 +10,6 @@ import UIKit
 class RoomsViewController: UIViewController {
     // MARK: - IBOutlets
 
-    @IBOutlet weak var closeButton: UIButton! {
-        didSet {
-            closeButton.setTitle("", for: .normal)
-        }
-    }
     @IBOutlet weak var tableView: UITableView!
    
     // MARK: - Private Properties
@@ -45,8 +40,16 @@ class RoomsViewController: UIViewController {
     }
     
     private func configureTableView() {
-        tableView.register(UINib(nibName: "RoomTableViewCell", bundle: nil), forCellReuseIdentifier: "RoomTableViewCell")
-        tableView.register(UINib(nibName: "RoomsHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "RoomsHeaderView")
+        tableView.register(
+            UINib(nibName: Constants.roomTableViewCell, bundle: nil),
+            forCellReuseIdentifier: Constants.roomTableViewCell
+        )
+        
+        tableView.register(
+            UINib(nibName: Constants.roomsHeaderView, bundle: nil),
+            forHeaderFooterViewReuseIdentifier: Constants.roomsHeaderView
+        )
+        
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -72,7 +75,7 @@ extension RoomsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell") as? RoomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.roomTableViewCell) as? RoomTableViewCell
         let room = rooms?[indexPath.row]
         cell?.configure(
             id: room?.id ?? "",
@@ -88,15 +91,15 @@ extension RoomsViewController: UITableViewDataSource {
 
 extension RoomsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return UIConstants.roomsTableViewCellHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RoomsHeaderView") as? RoomsHeaderView
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.roomsHeaderView) as? RoomsHeaderView
         return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
+        return UIConstants.roomsTableViewHeaderHeight
     }
 }

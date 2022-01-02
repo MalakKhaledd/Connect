@@ -38,102 +38,32 @@ class PeopleViewModel {
         return firstName + " " + lastName
     }
     
-    func getAddress(lat: Double, long: Double, completion: @escaping (String) -> Void)
-    {
+    func getAddress(lat: Double, long: Double, completion: @escaping (String) -> Void) {
         var address: String = ""
         let geoCoder = CLGeocoder()
         let location = CLLocation(latitude: lat, longitude: long)
-        //selectedLat and selectedLon are double values set by the app in a previous process
         
         geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
-            
-            // Place details
             var placeMark: CLPlacemark?
             placeMark = placemarks?[0]
             
-            // Address dictionary
-            //print(placeMark.addressDictionary ?? "")
-            
-            // Location name
-            if let locationName = placeMark?.addressDictionary?["Name"] as? String {
+            if let locationName = placeMark?.name {
                 address += locationName + ", "
             }
             
-            // Street address
-            if let street = placeMark?.addressDictionary?["Thoroughfare"] as? String {
+            if let street = placeMark?.thoroughfare {
                 address += street + ", "
             }
-            
-            // City
-            if let city = placeMark?.addressDictionary?["City"] as? String {
+
+            if let city = placeMark?.subAdministrativeArea {
                 address += city + ", "
             }
-            
-            // Zip code
-            if let zip = placeMark?.addressDictionary?["ZIP"] as? String {
-                address += zip + ", "
-            }
-            
-            // Country
-            if let country = placeMark?.addressDictionary?["Country"] as? String {
+
+            if let country = placeMark?.country {
                 address += country
             }
             
-           // Passing address back
            completion(address)
         })
     }
-    
-//    func getAddressFromLatLon(pdblLatitude: String, withLongitude pdblLongitude: String) -> String {
-//            var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
-//            let lat: Double = Double("\(pdblLatitude)")!
-//            //21.228124
-//            let lon: Double = Double("\(pdblLongitude)")!
-//            //72.833770
-//            let ceo: CLGeocoder = CLGeocoder()
-//            center.latitude = lat
-//            center.longitude = lon
-//
-//            let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
-//            var addressString : String = ""
-//
-//
-//            ceo.reverseGeocodeLocation(loc, completionHandler:
-//                {(placemarks, error) in
-//                    if (error != nil)
-//                    {
-//                        print("reverse geodcode fail: \(error!.localizedDescription)")
-//                    }
-//                    let pm = placemarks! as [CLPlacemark]
-//
-//                    if pm.count > 0 {
-//                        let pm = placemarks![0]
-//                        print(pm.country)
-//                        print(pm.locality)
-//                        print(pm.subLocality)
-//                        print(pm.thoroughfare)
-//                        print(pm.postalCode)
-//                        print(pm.subThoroughfare)
-//                        if pm.subLocality != nil {
-//                            addressString = addressString + pm.subLocality! + ", "
-//                        }
-//                        if pm.thoroughfare != nil {
-//                            addressString = addressString + pm.thoroughfare! + ", "
-//                        }
-//                        if pm.locality != nil {
-//                            addressString = addressString + pm.locality! + ", "
-//                        }
-//                        if pm.country != nil {
-//                            addressString = addressString + pm.country! + ", "
-//                        }
-//                        if pm.postalCode != nil {
-//                            addressString = addressString + pm.postalCode! + " "
-//                        }
-//
-//                        print(addressString)
-//
-//                  }
-//            })
-//        return addressString
-//        }
 }
