@@ -7,11 +7,19 @@
 
 import UIKit
 
+protocol PersonSelectedDelegate: AnyObject {
+    func didSelect(person: Person)
+}
+
 class PeopleMasterTableViewController: UITableViewController {
     // MARK: - Private Properties
     
     private var viewModel: PeopleViewModel?
     private var people: [Person]?
+    
+    // MARK: - Public Properties
+    
+    weak var delegate: PersonSelectedDelegate?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -81,9 +89,14 @@ class PeopleMasterTableViewController: UITableViewController {
         if let splitViewController = splitViewController {
             if splitViewController.isCollapsed {
                 let personViewController = storyboard?.instantiateViewController(withIdentifier: "PeopleDetailViewController") as? PeopleDetailViewController
-                personViewController?.selectedPersonID = selectedPerson?.id ?? ""
+                personViewController?.selectedPerson = selectedPerson
                 personViewController?.viewModel = viewModel
+                personViewController?.isDisplayedInCompactView = true
                 navigationController?.pushViewController(personViewController!, animated: true)
+            } else {
+                let personViewController = storyboard?.instantiateViewController(withIdentifier: "PeopleDetailViewController") as? PeopleDetailViewController
+                personViewController?.isDisplayedInCompactView = false
+                delegate?.didSelect(person: selectedPerson!)
             }
         }
     }

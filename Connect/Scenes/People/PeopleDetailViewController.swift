@@ -54,13 +54,16 @@ class PeopleDetailViewController: UIViewController {
     // MARK: - Public Properties
     
     var viewModel: PeopleViewModel?
-    var selectedPersonID: String?
+    var selectedPerson: Person?
+    var isDisplayedInCompactView: Bool?
     
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViews()
+        if isDisplayedInCompactView ?? false {
+            configureViews()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,16 +74,15 @@ class PeopleDetailViewController: UIViewController {
     // MARK: - Private functions
     
     private func configureViews() {
-        let person = viewModel?.people?.first { $0.id == selectedPersonID }
-        if let imageURL = URL(string: person?.avatar ?? "") {
+        if let imageURL = URL(string: selectedPerson?.avatar ?? "") {
             avatarImageView.downloaded(from: imageURL)
         }
-        nameLabel.text = viewModel?.retrieveFullName(firstName: person?.firstName, lastName: person?.lastName)
-        jobTitleLabel.text = person?.jobTitle
-        phoneLabel.text = person?.phone
-        emailLabel.text = person?.email
-        favoriteColorView.backgroundColor = hexStringToUIColor(hex: person?.favouriteColor ?? "")
-        displayAddress(for: person!)
+        nameLabel.text = viewModel?.retrieveFullName(firstName: selectedPerson?.firstName, lastName: selectedPerson?.lastName)
+        jobTitleLabel.text = selectedPerson?.jobTitle
+        phoneLabel.text = selectedPerson?.phone
+        emailLabel.text = selectedPerson?.email
+        favoriteColorView.backgroundColor = hexStringToUIColor(hex: selectedPerson?.favouriteColor ?? "")
+        displayAddress(for: selectedPerson!)
     }
     
     private func displayAddress(for person: Person) {
@@ -127,5 +129,12 @@ extension UIImageView {
     func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }
         downloaded(from: url, contentMode: mode)
+    }
+}
+
+extension PeopleDetailViewController: PersonSelectedDelegate {
+    func didSelect(person: Person) {
+        selectedPerson = person
+        configureViews()
     }
 }

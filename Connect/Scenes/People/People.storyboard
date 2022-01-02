@@ -245,9 +245,9 @@
             <objects>
                 <splitViewController storyboardIdentifier="PeopleSplitViewController" allowDoubleColumnStyle="YES" id="oOn-f0-j1L" customClass="PeopleSplitViewController" customModule="Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="Dhb-ph-nlU" kind="relationship" relationship="masterViewController" id="gXW-eQ-7Iw"/>
                         <segue destination="zZN-KT-mVj" kind="relationship" relationship="detailViewController" id="IdM-xf-yTD"/>
                         <segue destination="fAt-op-3OM" kind="relationship" relationship="compactViewController" id="GoM-TV-CEc"/>
+                        <segue destination="fAt-op-3OM" kind="relationship" relationship="masterViewController" id="XHM-Ua-DDb"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvF-xv-qA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -256,7 +256,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="isb-RT-48G"/>
+        <segue reference="GoM-TV-CEc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
