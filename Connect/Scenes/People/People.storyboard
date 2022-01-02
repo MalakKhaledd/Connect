@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -14,33 +14,33 @@
             <objects>
                 <viewController storyboardIdentifier="PeopleDetailViewController" id="zZN-KT-mVj" customClass="PeopleDetailViewController" customModule="Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QQS-Ho-xzX">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BwT-Nm-qZN">
-                                <rect key="frame" x="437" y="114" width="150" height="150"/>
+                                <rect key="frame" x="132" y="108" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="2sm-5n-i2s"/>
                                     <constraint firstAttribute="width" constant="150" id="YUb-v9-Wgu"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntq-JA-aj0">
-                                <rect key="frame" x="477" y="294" width="70" height="32.5"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <rect key="frame" x="176" y="268" width="62" height="29"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQO-2F-LJ6">
-                                <rect key="frame" x="20" y="376.5" width="984" height="60"/>
+                                <rect key="frame" x="20" y="317" width="374" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xe-W6-hPu">
-                                        <rect key="frame" x="20" y="21" width="52.5" height="18.5"/>
+                                        <rect key="frame" x="20" y="16" width="52.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                         <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f31-tu-1NX" customClass="CopyableLabel" customModule="Connect" customModuleProvider="target">
-                                        <rect key="frame" x="836" y="21" width="128" height="18.5"/>
+                                        <rect key="frame" x="226" y="16" width="128" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                         <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -50,23 +50,25 @@
                                 <constraints>
                                     <constraint firstItem="f31-tu-1NX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Xe-W6-hPu" secondAttribute="trailing" constant="10" id="1ch-lv-A23"/>
                                     <constraint firstItem="5Xe-W6-hPu" firstAttribute="leading" secondItem="dQO-2F-LJ6" secondAttribute="leading" constant="20" id="EQZ-nO-swi"/>
-                                    <constraint firstAttribute="height" constant="60" id="Q1e-tM-UGg"/>
+                                    <constraint firstAttribute="height" constant="50" id="Q1e-tM-UGg">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="f31-tu-1NX" secondAttribute="trailing" constant="20" id="cwT-3x-pdE"/>
                                     <constraint firstItem="5Xe-W6-hPu" firstAttribute="centerY" secondItem="dQO-2F-LJ6" secondAttribute="centerY" id="h62-Fm-3gz"/>
                                     <constraint firstItem="f31-tu-1NX" firstAttribute="centerY" secondItem="5Xe-W6-hPu" secondAttribute="centerY" id="i14-Hn-SmC"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRq-UC-0MF">
-                                <rect key="frame" x="20" y="456.5" width="984" height="60"/>
+                                <rect key="frame" x="20" y="377" width="374" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNk-0c-h0J">
-                                        <rect key="frame" x="20" y="21" width="39.5" height="18.5"/>
+                                        <rect key="frame" x="20" y="16" width="39.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                         <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxh-pV-oD0" customClass="CopyableLabel" customModule="Connect" customModuleProvider="target">
-                                        <rect key="frame" x="849" y="21" width="115" height="18.5"/>
+                                        <rect key="frame" x="239" y="16" width="115" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                         <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -75,7 +77,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="UNk-0c-h0J" firstAttribute="centerY" secondItem="DRq-UC-0MF" secondAttribute="centerY" id="ANW-O7-dOL"/>
-                                    <constraint firstAttribute="height" constant="60" id="BZS-75-ODq"/>
+                                    <constraint firstAttribute="height" constant="50" id="BZS-75-ODq">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                    </constraint>
                                     <constraint firstItem="UNk-0c-h0J" firstAttribute="leading" secondItem="DRq-UC-0MF" secondAttribute="leading" constant="20" id="dCL-yC-LH8"/>
                                     <constraint firstAttribute="trailing" secondItem="Bxh-pV-oD0" secondAttribute="trailing" constant="20" id="eXu-tm-Jw2"/>
                                     <constraint firstItem="Bxh-pV-oD0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UNk-0c-h0J" secondAttribute="trailing" constant="10" id="f3T-99-Glw"/>
@@ -83,16 +87,16 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hub-wv-8dm">
-                                <rect key="frame" x="20" y="536.5" width="984" height="60"/>
+                                <rect key="frame" x="20" y="437" width="374" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRc-bf-JbK">
-                                        <rect key="frame" x="20" y="21" width="34.5" height="18.5"/>
+                                        <rect key="frame" x="20" y="16" width="34.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                         <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-xQ-Bkq" customClass="CopyableLabel" customModule="Connect" customModuleProvider="target">
-                                        <rect key="frame" x="854" y="21" width="110" height="18.5"/>
+                                        <rect key="frame" x="244" y="16" width="110" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                         <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -105,20 +109,22 @@
                                     <constraint firstItem="m1e-xQ-Bkq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YRc-bf-JbK" secondAttribute="trailing" constant="10" id="7Mn-Jd-AFr"/>
                                     <constraint firstItem="YRc-bf-JbK" firstAttribute="centerY" secondItem="hub-wv-8dm" secondAttribute="centerY" id="CcE-ls-aG1"/>
                                     <constraint firstAttribute="trailing" secondItem="m1e-xQ-Bkq" secondAttribute="trailing" constant="20" id="p42-rf-34W"/>
-                                    <constraint firstAttribute="height" constant="60" id="xRa-5E-yTO"/>
+                                    <constraint firstAttribute="height" constant="50" id="xRa-5E-yTO">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                    </constraint>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNF-R8-i6l">
-                                <rect key="frame" x="20" y="616.5" width="984" height="60"/>
+                                <rect key="frame" x="20" y="497" width="374" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvZ-Uh-L4Q">
-                                        <rect key="frame" x="20" y="21" width="53.5" height="18.5"/>
+                                        <rect key="frame" x="20" y="16" width="53.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                         <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Description" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tY-Ho-H3m" customClass="CopyableLabel" customModule="Connect" customModuleProvider="target">
-                                        <rect key="frame" x="835" y="21" width="129" height="18.5"/>
+                                        <rect key="frame" x="225" y="16" width="129" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                         <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -128,23 +134,25 @@
                                 <constraints>
                                     <constraint firstItem="cvZ-Uh-L4Q" firstAttribute="leading" secondItem="UNF-R8-i6l" secondAttribute="leading" constant="20" id="FRt-la-erG"/>
                                     <constraint firstItem="cvZ-Uh-L4Q" firstAttribute="centerY" secondItem="UNF-R8-i6l" secondAttribute="centerY" id="Kfm-5A-6tP"/>
-                                    <constraint firstAttribute="height" constant="60" id="WUp-Pp-53M"/>
+                                    <constraint firstAttribute="height" constant="50" id="WUp-Pp-53M">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                    </constraint>
                                     <constraint firstItem="2tY-Ho-H3m" firstAttribute="centerY" secondItem="cvZ-Uh-L4Q" secondAttribute="centerY" id="YMR-s8-DZX"/>
                                     <constraint firstItem="2tY-Ho-H3m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cvZ-Uh-L4Q" secondAttribute="trailing" constant="10" id="hv0-Ck-Jrk"/>
                                     <constraint firstAttribute="trailing" secondItem="2tY-Ho-H3m" secondAttribute="trailing" constant="20" id="nLX-KU-reT"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuQ-3K-WxC">
-                                <rect key="frame" x="20" y="696.5" width="984" height="60"/>
+                                <rect key="frame" x="20" y="557" width="374" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite Colour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsc-7z-VU5">
-                                        <rect key="frame" x="20" y="21" width="106.5" height="18.5"/>
+                                        <rect key="frame" x="20" y="16" width="106.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                         <color key="textColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLV-Ib-Vwg">
-                                        <rect key="frame" x="924" y="10" width="40" height="40"/>
+                                        <rect key="frame" x="314" y="10" width="40" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="1ZF-Nh-zkR"/>
@@ -156,7 +164,9 @@
                                     <constraint firstItem="JLV-Ib-Vwg" firstAttribute="top" secondItem="WuQ-3K-WxC" secondAttribute="top" constant="10" id="0Wn-EO-5PF"/>
                                     <constraint firstItem="qsc-7z-VU5" firstAttribute="leading" secondItem="WuQ-3K-WxC" secondAttribute="leading" constant="20" id="D34-UL-c4G"/>
                                     <constraint firstItem="qsc-7z-VU5" firstAttribute="centerY" secondItem="WuQ-3K-WxC" secondAttribute="centerY" id="RiG-U2-Zyp"/>
-                                    <constraint firstAttribute="height" constant="60" id="gcu-GP-BIC"/>
+                                    <constraint firstAttribute="height" constant="50" id="gcu-GP-BIC">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="JLV-Ib-Vwg" secondAttribute="trailing" constant="20" id="qFp-I2-vMw"/>
                                     <constraint firstAttribute="bottom" secondItem="JLV-Ib-Vwg" secondAttribute="bottom" constant="10" id="rTd-jW-ELe"/>
                                 </constraints>
@@ -165,9 +175,9 @@
                         <viewLayoutGuide key="safeArea" id="opx-Uy-VU0"/>
                         <color key="backgroundColor" red="0.76862745099999996" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UNF-R8-i6l" firstAttribute="top" secondItem="hub-wv-8dm" secondAttribute="bottom" constant="20" id="6pB-w2-wgJ"/>
+                            <constraint firstItem="UNF-R8-i6l" firstAttribute="top" secondItem="hub-wv-8dm" secondAttribute="bottom" constant="10" id="6pB-w2-wgJ"/>
                             <constraint firstItem="hub-wv-8dm" firstAttribute="trailing" secondItem="DRq-UC-0MF" secondAttribute="trailing" id="9nO-UL-eik"/>
-                            <constraint firstItem="dQO-2F-LJ6" firstAttribute="top" secondItem="ntq-JA-aj0" secondAttribute="bottom" constant="30" id="CaB-5k-Rzz">
+                            <constraint firstItem="dQO-2F-LJ6" firstAttribute="top" secondItem="ntq-JA-aj0" secondAttribute="bottom" constant="20" id="CaB-5k-Rzz">
                                 <variation key="heightClass=regular-widthClass=regular" constant="50"/>
                             </constraint>
                             <constraint firstItem="dQO-2F-LJ6" firstAttribute="leading" secondItem="opx-Uy-VU0" secondAttribute="leading" constant="20" id="EaE-DS-fHn"/>
@@ -178,13 +188,13 @@
                             <constraint firstItem="DRq-UC-0MF" firstAttribute="leading" secondItem="dQO-2F-LJ6" secondAttribute="leading" id="b7U-g0-wmR"/>
                             <constraint firstItem="WuQ-3K-WxC" firstAttribute="trailing" secondItem="UNF-R8-i6l" secondAttribute="trailing" id="eRK-lp-k9o"/>
                             <constraint firstItem="opx-Uy-VU0" firstAttribute="trailing" secondItem="dQO-2F-LJ6" secondAttribute="trailing" constant="20" id="gdW-3Y-Pjm"/>
-                            <constraint firstItem="BwT-Nm-qZN" firstAttribute="top" secondItem="opx-Uy-VU0" secondAttribute="top" constant="40" id="hEz-vv-PSb"/>
+                            <constraint firstItem="BwT-Nm-qZN" firstAttribute="top" secondItem="opx-Uy-VU0" secondAttribute="top" constant="20" id="hEz-vv-PSb"/>
                             <constraint firstItem="DRq-UC-0MF" firstAttribute="trailing" secondItem="dQO-2F-LJ6" secondAttribute="trailing" id="hpI-wg-fd2"/>
-                            <constraint firstItem="DRq-UC-0MF" firstAttribute="top" secondItem="dQO-2F-LJ6" secondAttribute="bottom" constant="20" id="nEX-iG-LoU"/>
-                            <constraint firstItem="hub-wv-8dm" firstAttribute="top" secondItem="DRq-UC-0MF" secondAttribute="bottom" constant="20" id="oaB-Ay-cKH"/>
+                            <constraint firstItem="DRq-UC-0MF" firstAttribute="top" secondItem="dQO-2F-LJ6" secondAttribute="bottom" constant="10" id="nEX-iG-LoU"/>
+                            <constraint firstItem="hub-wv-8dm" firstAttribute="top" secondItem="DRq-UC-0MF" secondAttribute="bottom" constant="10" id="oaB-Ay-cKH"/>
                             <constraint firstItem="UNF-R8-i6l" firstAttribute="leading" secondItem="hub-wv-8dm" secondAttribute="leading" id="pO7-yL-vCO"/>
                             <constraint firstItem="BwT-Nm-qZN" firstAttribute="centerX" secondItem="opx-Uy-VU0" secondAttribute="centerX" id="qGC-7L-1v2"/>
-                            <constraint firstItem="WuQ-3K-WxC" firstAttribute="top" secondItem="UNF-R8-i6l" secondAttribute="bottom" constant="20" id="qbQ-tq-MF2"/>
+                            <constraint firstItem="WuQ-3K-WxC" firstAttribute="top" secondItem="UNF-R8-i6l" secondAttribute="bottom" constant="10" id="qbQ-tq-MF2"/>
                             <constraint firstItem="ntq-JA-aj0" firstAttribute="top" secondItem="BwT-Nm-qZN" secondAttribute="bottom" constant="10" id="sIx-G5-E9y">
                                 <variation key="heightClass=regular-widthClass=regular" constant="30"/>
                             </constraint>
@@ -215,7 +225,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="PeopleMasterTableViewController" clearsSelectionOnViewWillAppear="NO" id="fAt-op-3OM" customClass="PeopleMasterTableViewController" customModule="Connect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="3su-J0-0w2">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <connections>
@@ -234,7 +244,7 @@
             <objects>
                 <navigationController id="Dhb-ph-nlU" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5yz-4H-snY">
-                        <rect key="frame" x="0.0" y="24" width="1024" height="50"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
