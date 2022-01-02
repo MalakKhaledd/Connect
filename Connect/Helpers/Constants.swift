@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct Constants {
-    static let roomTableViewCell: String = "RoomTableViewCell"
+    static let infoTableViewCell: String = "InformationTableViewCell"
     static let roomsHeaderView: String = "RoomsHeaderView"
     static let occupiedString: String = "Occupied"
     static let freeString: String = "Free"

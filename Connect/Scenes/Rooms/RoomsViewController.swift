@@ -41,8 +41,8 @@ class RoomsViewController: UIViewController {
     
     private func configureTableView() {
         tableView.register(
-            UINib(nibName: Constants.roomTableViewCell, bundle: nil),
-            forCellReuseIdentifier: Constants.roomTableViewCell
+            UINib(nibName: Constants.infoTableViewCell, bundle: nil),
+            forCellReuseIdentifier: Constants.infoTableViewCell
         )
         
         tableView.register(
@@ -75,7 +75,7 @@ extension RoomsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.roomTableViewCell) as? RoomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.infoTableViewCell) as? InformationTableViewCell
         let room = rooms?[indexPath.row]
         cell?.configure(
             id: room?.id ?? "",

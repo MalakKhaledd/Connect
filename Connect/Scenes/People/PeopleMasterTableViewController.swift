@@ -37,7 +37,7 @@ class PeopleMasterTableViewController: UITableViewController {
     // MARK: - Private Functions
     
     private func configureTableView() {
-        tableView.register(UINib(nibName: "RoomTableViewCell", bundle: nil), forCellReuseIdentifier: "RoomTableViewCell")
+        tableView.register(UINib(nibName: Constants.infoTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCell)
     }
     
     private func configureViewModel() {
@@ -73,7 +73,7 @@ class PeopleMasterTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell") as? RoomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.infoTableViewCell) as? InformationTableViewCell
         let person = people?[indexPath.row]
         cell?.configure(
             id: "",

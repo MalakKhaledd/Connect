@@ -1,5 +1,5 @@
 //
-//  RoomTableViewCell.swift
+//  InformationTableViewCell.swift
 //  Connect
 //
 //  Created by Malak Badawy on 31/12/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RoomTableViewCell: UITableViewCell {
+class InformationTableViewCell: UITableViewCell {
     // MARK: - IBOutlets
 
     @IBOutlet weak var idLabel: UILabel!
@@ -33,7 +33,7 @@ class RoomTableViewCell: UITableViewCell {
 
 // MARK: - Adding accessibility to labels
 
-extension RoomTableViewCell {
+extension InformationTableViewCell {
     func applyAccessibility(id: String, name: String, maxOccupancy: String, occupancy: String) {
         idLabel.isAccessibilityElement = true
         idLabel.accessibilityTraits = .none

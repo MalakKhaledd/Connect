@@ -20,8 +20,8 @@
 		38581850277F6BAF00B87B04 /* Rooms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3858184F277F6BAF00B87B04 /* Rooms.storyboard */; };
 		38581852277F6BC400B87B04 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581851277F6BC400B87B04 /* RoomsViewController.swift */; };
 		38581855277F97BC00B87B04 /* RoomsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581854277F97BC00B87B04 /* RoomsViewModel.swift */; };
-		38581858277F9B9B00B87B04 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581856277F9B9A00B87B04 /* RoomTableViewCell.swift */; };
-		38581859277F9B9B00B87B04 /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38581857277F9B9B00B87B04 /* RoomTableViewCell.xib */; };
+		38581858277F9B9B00B87B04 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38581856277F9B9A00B87B04 /* InformationTableViewCell.swift */; };
+		38581859277F9B9B00B87B04 /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38581857277F9B9B00B87B04 /* InformationTableViewCell.xib */; };
 		3858185C277FA39100B87B04 /* RoomsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858185B277FA39100B87B04 /* RoomsHeaderView.swift */; };
 		3858185F277FA41E00B87B04 /* RoomsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3858185E277FA41E00B87B04 /* RoomsHeaderView.xib */; };
 		385818612780750C00B87B04 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385818602780750C00B87B04 /* Person.swift */; };
@@ -72,8 +72,8 @@
 		3858184F277F6BAF00B87B04 /* Rooms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rooms.storyboard; sourceTree = "<group>"; };
 		38581851277F6BC400B87B04 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		38581854277F97BC00B87B04 /* RoomsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewModel.swift; sourceTree = "<group>"; };
-		38581856277F9B9A00B87B04 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
-		38581857277F9B9B00B87B04 /* RoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
+		38581856277F9B9A00B87B04 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
+		38581857277F9B9B00B87B04 /* InformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
 		3858185B277FA39100B87B04 /* RoomsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsHeaderView.swift; sourceTree = "<group>"; };
 		3858185E277FA41E00B87B04 /* RoomsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomsHeaderView.xib; sourceTree = "<group>"; };
 		385818602780750C00B87B04 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -226,8 +226,8 @@
 		3858185A277F9BA200B87B04 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				38581856277F9B9A00B87B04 /* RoomTableViewCell.swift */,
-				38581857277F9B9B00B87B04 /* RoomTableViewCell.xib */,
+				38581856277F9B9A00B87B04 /* InformationTableViewCell.swift */,
+				38581857277F9B9B00B87B04 /* InformationTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -376,7 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38581859277F9B9B00B87B04 /* RoomTableViewCell.xib in Resources */,
+				38581859277F9B9B00B87B04 /* InformationTableViewCell.xib in Resources */,
 				38581844277F62DD00B87B04 /* Home.storyboard in Resources */,
 				3858181D277F587400B87B04 /* LaunchScreen.storyboard in Resources */,
 				3858181A277F587400B87B04 /* Assets.xcassets in Resources */,
@@ -416,7 +416,7 @@
 				38740DB627820EF8001749F6 /* UIViewControllerExt.swift in Sources */,
 				3858186827807B0100B87B04 /* PeopleDetailViewController.swift in Sources */,
 				38581852277F6BC400B87B04 /* RoomsViewController.swift in Sources */,
-				38581858277F9B9B00B87B04 /* RoomTableViewCell.swift in Sources */,
+				38581858277F9B9B00B87B04 /* InformationTableViewCell.swift in Sources */,
 				3858185C277FA39100B87B04 /* RoomsHeaderView.swift in Sources */,
 				38740DBB2782126B001749F6 /* StringExt.swift in Sources */,
 				3858184D277F6A0800B87B04 /* Room.swift in Sources */,
