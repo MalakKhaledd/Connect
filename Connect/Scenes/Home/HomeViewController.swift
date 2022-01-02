@@ -27,12 +27,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = .black
     }
     
-    let roomsStoryboardName = "Rooms"
-    let roomsViewCtrlIdentifier = "RoomsViewController"
-    let peopleStoryboardName = "People"
-    let peopleSplitViewCtrlIdentifier = "PeopleSplitViewController"
+    // MARK: - Private Properties
+
+    private let roomsStoryboardName = "Rooms"
+    private let roomsViewCtrlIdentifier = "RoomsViewController"
+    private let peopleStoryboardName = "People"
+    private let peopleSplitViewCtrlIdentifier = "PeopleSplitViewController"
     
     // MARK: - IBActions
     
