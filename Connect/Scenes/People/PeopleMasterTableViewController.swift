@@ -23,6 +23,7 @@ class PeopleMasterTableViewController: UITableViewController {
     weak var delegate: PersonSelectedDelegate?
 
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
