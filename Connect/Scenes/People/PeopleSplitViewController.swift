@@ -11,5 +11,14 @@ class PeopleSplitViewController: UISplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.preferredDisplayMode = .allVisible
+        if #available(iOS 14.0, *) {
+            let masterVC = self.viewController(for: .primary) as? PeopleMasterTableViewController
+            let detailVC = self.viewController(for: .secondary) as? PeopleDetailViewController
+            masterVC?.delegate = detailVC
+        } else {
+            let masterVC = self.primaryViewController
+            let detailVC = self.secondaryViewController
+            masterVC?.delegate = detailVC
+        }
     }
 }

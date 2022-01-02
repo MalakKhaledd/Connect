@@ -55,10 +55,14 @@
                         <constraint firstItem="bta-zh-1Hr" firstAttribute="firstBaseline" secondItem="XJU-P7-Xut" secondAttribute="firstBaseline" id="0XS-hD-xio"/>
                         <constraint firstItem="XJU-P7-Xut" firstAttribute="centerY" secondItem="WA2-DS-PdM" secondAttribute="centerY" id="FUV-pD-Bw1"/>
                         <constraint firstItem="lVY-yv-DMl" firstAttribute="firstBaseline" secondItem="bta-zh-1Hr" secondAttribute="firstBaseline" id="G5g-PI-CWE"/>
-                        <constraint firstAttribute="trailing" secondItem="lVY-yv-DMl" secondAttribute="trailing" constant="45" id="GSr-4m-z96"/>
+                        <constraint firstAttribute="trailing" secondItem="lVY-yv-DMl" secondAttribute="trailing" constant="45" id="GSr-4m-z96">
+                            <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                        </constraint>
                         <constraint firstItem="FrY-oo-Jo4" firstAttribute="leading" secondItem="WA2-DS-PdM" secondAttribute="leading" id="Jee-sb-TsM"/>
                         <constraint firstItem="bta-zh-1Hr" firstAttribute="leading" secondItem="XJU-P7-Xut" secondAttribute="trailing" constant="10" id="UoV-EU-5jz"/>
-                        <constraint firstItem="lVY-yv-DMl" firstAttribute="leading" secondItem="9l8-fF-Ihj" secondAttribute="trailing" constant="20" id="VTH-nV-Zhz"/>
+                        <constraint firstItem="lVY-yv-DMl" firstAttribute="leading" secondItem="9l8-fF-Ihj" secondAttribute="trailing" constant="20" id="VTH-nV-Zhz">
+                            <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                        </constraint>
                         <constraint firstItem="XJU-P7-Xut" firstAttribute="leading" secondItem="WA2-DS-PdM" secondAttribute="leading" constant="15" id="X5Y-nj-dLd"/>
                         <constraint firstItem="9l8-fF-Ihj" firstAttribute="firstBaseline" secondItem="bta-zh-1Hr" secondAttribute="firstBaseline" id="mm7-xF-fcp"/>
                         <constraint firstAttribute="trailing" secondItem="FrY-oo-Jo4" secondAttribute="trailing" id="svu-LN-am2"/>

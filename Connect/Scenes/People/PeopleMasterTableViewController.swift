@@ -7,11 +7,19 @@
 
 import UIKit
 
+protocol PersonSelectedDelegate: AnyObject {
+    func didSelect(person: Person, viewModel: PeopleViewModel?)
+}
+
 class PeopleMasterTableViewController: UITableViewController {
     // MARK: - Private Properties
     
     private var viewModel: PeopleViewModel?
     private var people: [Person]?
+    
+    // MARK: - Public Properties
+    
+    weak var delegate: PersonSelectedDelegate?
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -48,6 +56,13 @@ class PeopleMasterTableViewController: UITableViewController {
     private func reloadTable() {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
+            self?.displayFirstPersonIfNotInCompactMode()
+        }
+    }
+    
+    private func displayFirstPersonIfNotInCompactMode() {
+        if let splitViewController = splitViewController, !splitViewController.isCollapsed, let person = people?[0] {
+            delegate?.didSelect(person: person, viewModel: viewModel)
         }
     }
 
@@ -73,7 +88,7 @@ class PeopleMasterTableViewController: UITableViewController {
     // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return UIConstants.roomsTableViewCellHeight
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -81,9 +96,14 @@ class PeopleMasterTableViewController: UITableViewController {
         if let splitViewController = splitViewController {
             if splitViewController.isCollapsed {
                 let personViewController = storyboard?.instantiateViewController(withIdentifier: "PeopleDetailViewController") as? PeopleDetailViewController
-                personViewController?.selectedPersonID = selectedPerson?.id ?? ""
+                personViewController?.selectedPerson = selectedPerson
                 personViewController?.viewModel = viewModel
+                personViewController?.isDisplayedInCompactView = true
                 navigationController?.pushViewController(personViewController!, animated: true)
+            } else {
+                let personViewController = storyboard?.instantiateViewController(withIdentifier: "PeopleDetailViewController") as? PeopleDetailViewController
+                personViewController?.isDisplayedInCompactView = false
+                delegate?.didSelect(person: selectedPerson!, viewModel: viewModel)
             }
         }
     }

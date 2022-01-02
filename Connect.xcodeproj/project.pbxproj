@@ -30,6 +30,11 @@
 		3858186827807B0100B87B04 /* PeopleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858186727807B0100B87B04 /* PeopleDetailViewController.swift */; };
 		3858186A2780872A00B87B04 /* PeopleSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385818692780872A00B87B04 /* PeopleSplitViewController.swift */; };
 		3858186C27808F7900B87B04 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3858186B27808F7900B87B04 /* PeopleViewModel.swift */; };
+		38740DB32781FECC001749F6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DB22781FECC001749F6 /* Constants.swift */; };
+		38740DB627820EF8001749F6 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DB527820EF8001749F6 /* UIViewControllerExt.swift */; };
+		38740DB927821235001749F6 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DB827821235001749F6 /* UIImageExt.swift */; };
+		38740DBB2782126B001749F6 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DBA2782126B001749F6 /* StringExt.swift */; };
+		38740DBD27821312001749F6 /* UISplitViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DBC27821312001749F6 /* UISplitViewExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,11 @@
 		3858186727807B0100B87B04 /* PeopleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewController.swift; sourceTree = "<group>"; };
 		385818692780872A00B87B04 /* PeopleSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSplitViewController.swift; sourceTree = "<group>"; };
 		3858186B27808F7900B87B04 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		38740DB22781FECC001749F6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		38740DB527820EF8001749F6 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		38740DB827821235001749F6 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
+		38740DBA2782126B001749F6 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		38740DBC27821312001749F6 /* UISplitViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISplitViewExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +140,8 @@
 				3858181E277F587400B87B04 /* Info.plist */,
 				38581840277F629400B87B04 /* Supporting Files */,
 				3858184B277F699A00B87B04 /* Network */,
+				38740DB727820F01001749F6 /* Extensions */,
+				38740DB42781FED3001749F6 /* Helpers */,
 				3858184E277F6A0D00B87B04 /* Models */,
 				38581848277F696000B87B04 /* Scenes */,
 			);
@@ -239,6 +251,25 @@
 				385818692780872A00B87B04 /* PeopleSplitViewController.swift */,
 			);
 			path = People;
+			sourceTree = "<group>";
+		};
+		38740DB42781FED3001749F6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				38740DB22781FECC001749F6 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		38740DB727820F01001749F6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				38740DB527820EF8001749F6 /* UIViewControllerExt.swift */,
+				38740DB827821235001749F6 /* UIImageExt.swift */,
+				38740DBA2782126B001749F6 /* StringExt.swift */,
+				38740DBC27821312001749F6 /* UISplitViewExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,14 +410,19 @@
 				3858186C27808F7900B87B04 /* PeopleViewModel.swift in Sources */,
 				38581811277F586E00B87B04 /* AppDelegate.swift in Sources */,
 				38581865278077A300B87B04 /* PeopleMasterTableViewController.swift in Sources */,
+				38740DBD27821312001749F6 /* UISplitViewExt.swift in Sources */,
 				3858186A2780872A00B87B04 /* PeopleSplitViewController.swift in Sources */,
 				3858184A277F698000B87B04 /* NetworkService.swift in Sources */,
+				38740DB627820EF8001749F6 /* UIViewControllerExt.swift in Sources */,
 				3858186827807B0100B87B04 /* PeopleDetailViewController.swift in Sources */,
 				38581852277F6BC400B87B04 /* RoomsViewController.swift in Sources */,
 				38581858277F9B9B00B87B04 /* RoomTableViewCell.swift in Sources */,
 				3858185C277FA39100B87B04 /* RoomsHeaderView.swift in Sources */,
+				38740DBB2782126B001749F6 /* StringExt.swift in Sources */,
 				3858184D277F6A0800B87B04 /* Room.swift in Sources */,
 				385818612780750C00B87B04 /* Person.swift in Sources */,
+				38740DB32781FECC001749F6 /* Constants.swift in Sources */,
+				38740DB927821235001749F6 /* UIImageExt.swift in Sources */,
 				38581846277F62F700B87B04 /* HomeViewController.swift in Sources */,
 				38581855277F97BC00B87B04 /* RoomsViewModel.swift in Sources */,
 			);
@@ -565,8 +601,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -594,8 +632,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

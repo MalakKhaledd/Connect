@@ -28,6 +28,6 @@ class RoomsViewModel {
     }
     
     func appropriateOccupancyStatus(isOccupied: Bool) -> String {
-        return isOccupied ? "Occupied" : "Free"
+        return isOccupied ? Constants.occupiedString : Constants.freeString
     }
 }
