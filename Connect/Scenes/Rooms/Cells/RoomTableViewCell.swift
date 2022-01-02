@@ -31,6 +31,8 @@ class RoomTableViewCell: UITableViewCell {
     }
 }
 
+// MARK: - Adding accessibility to labels
+
 extension RoomTableViewCell {
     func applyAccessibility(id: String, name: String, maxOccupancy: String, occupancy: String) {
         idLabel.isAccessibilityElement = true
