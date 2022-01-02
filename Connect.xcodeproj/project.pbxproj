@@ -36,6 +36,7 @@
 		38740DBB2782126B001749F6 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DBA2782126B001749F6 /* StringExt.swift */; };
 		38740DBD27821312001749F6 /* UISplitViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DBC27821312001749F6 /* UISplitViewExt.swift */; };
 		38740DBF27825382001749F6 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DBE27825382001749F6 /* UIButtonExt.swift */; };
+		38740DC127825FDE001749F6 /* CopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DC027825FDE001749F6 /* CopyableLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		38740DBA2782126B001749F6 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		38740DBC27821312001749F6 /* UISplitViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISplitViewExt.swift; sourceTree = "<group>"; };
 		38740DBE27825382001749F6 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		38740DC027825FDE001749F6 /* CopyableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyableLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				38740DB22781FECC001749F6 /* Constants.swift */,
+				38740DC027825FDE001749F6 /* CopyableLabel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				38581811277F586E00B87B04 /* AppDelegate.swift in Sources */,
 				38581865278077A300B87B04 /* PeopleMasterTableViewController.swift in Sources */,
 				38740DBD27821312001749F6 /* UISplitViewExt.swift in Sources */,
+				38740DC127825FDE001749F6 /* CopyableLabel.swift in Sources */,
 				3858186A2780872A00B87B04 /* PeopleSplitViewController.swift in Sources */,
 				3858184A277F698000B87B04 /* NetworkService.swift in Sources */,
 				38740DB627820EF8001749F6 /* UIViewControllerExt.swift in Sources */,
