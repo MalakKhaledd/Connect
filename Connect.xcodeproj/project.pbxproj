@@ -35,6 +35,7 @@
 		38740DB927821235001749F6 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DB827821235001749F6 /* UIImageExt.swift */; };
 		38740DBB2782126B001749F6 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DBA2782126B001749F6 /* StringExt.swift */; };
 		38740DBD27821312001749F6 /* UISplitViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DBC27821312001749F6 /* UISplitViewExt.swift */; };
+		38740DBF27825382001749F6 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38740DBE27825382001749F6 /* UIButtonExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		38740DB827821235001749F6 /* UIImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		38740DBA2782126B001749F6 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		38740DBC27821312001749F6 /* UISplitViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISplitViewExt.swift; sourceTree = "<group>"; };
+		38740DBE27825382001749F6 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 				38740DB827821235001749F6 /* UIImageExt.swift */,
 				38740DBA2782126B001749F6 /* StringExt.swift */,
 				38740DBC27821312001749F6 /* UISplitViewExt.swift */,
+				38740DBE27825382001749F6 /* UIButtonExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3858186C27808F7900B87B04 /* PeopleViewModel.swift in Sources */,
+				38740DBF27825382001749F6 /* UIButtonExt.swift in Sources */,
 				38581811277F586E00B87B04 /* AppDelegate.swift in Sources */,
 				38581865278077A300B87B04 /* PeopleMasterTableViewController.swift in Sources */,
 				38740DBD27821312001749F6 /* UISplitViewExt.swift in Sources */,
