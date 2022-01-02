@@ -16,6 +16,7 @@ class PeopleMasterTableViewController: UITableViewController {
     
     private var viewModel: PeopleViewModel?
     private var people: [Person]?
+    private let peopleDetailViewCtrlIdentifier = "PeopleDetailViewController"
     
     // MARK: - Public Properties
     
@@ -90,13 +91,13 @@ class PeopleMasterTableViewController: UITableViewController {
         let selectedPerson = people?[indexPath.row]
         if let splitViewController = splitViewController {
             if splitViewController.isCollapsed {
-                let personViewController = storyboard?.instantiateViewController(withIdentifier: "PeopleDetailViewController") as? PeopleDetailViewController
+                let personViewController = storyboard?.instantiateViewController(withIdentifier: peopleDetailViewCtrlIdentifier) as? PeopleDetailViewController
                 personViewController?.selectedPerson = selectedPerson
                 personViewController?.viewModel = viewModel
                 personViewController?.isDisplayedInCompactView = true
                 navigationController?.pushViewController(personViewController!, animated: true)
             } else {
-                let personViewController = storyboard?.instantiateViewController(withIdentifier: "PeopleDetailViewController") as? PeopleDetailViewController
+                let personViewController = storyboard?.instantiateViewController(withIdentifier: peopleDetailViewCtrlIdentifier) as? PeopleDetailViewController
                 personViewController?.isDisplayedInCompactView = false
                 delegate?.didSelect(person: selectedPerson!, viewModel: viewModel)
             }
