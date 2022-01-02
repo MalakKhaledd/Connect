@@ -77,6 +77,7 @@ extension RoomsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.infoTableViewCell) as? InformationTableViewCell
         let room = rooms?[indexPath.row]
+        cell?.selectionStyle = .none
         cell?.configure(
             id: room?.id ?? "",
             name: room?.name ?? "",
