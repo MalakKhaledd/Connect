@@ -16,12 +16,14 @@ class PeopleMasterTableViewController: UITableViewController {
     
     private var viewModel: PeopleViewModel?
     private var people: [Person]?
+    private let peopleDetailViewCtrlIdentifier = "PeopleDetailViewController"
     
     // MARK: - Public Properties
     
     weak var delegate: PersonSelectedDelegate?
 
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -29,15 +31,10 @@ class PeopleMasterTableViewController: UITableViewController {
         fetchPeople()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.tintColor = UIColor(named: "AccentColor")
-    }
-    
     // MARK: - Private Functions
     
     private func configureTableView() {
-        tableView.register(UINib(nibName: "RoomTableViewCell", bundle: nil), forCellReuseIdentifier: "RoomTableViewCell")
+        tableView.register(UINib(nibName: Constants.infoTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.infoTableViewCell)
     }
     
     private func configureViewModel() {
@@ -73,7 +70,7 @@ class PeopleMasterTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RoomTableViewCell") as? RoomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.infoTableViewCell) as? InformationTableViewCell
         let person = people?[indexPath.row]
         cell?.configure(
             id: "",
@@ -95,13 +92,13 @@ class PeopleMasterTableViewController: UITableViewController {
         let selectedPerson = people?[indexPath.row]
         if let splitViewController = splitViewController {
             if splitViewController.isCollapsed {
-                let personViewController = storyboard?.instantiateViewController(withIdentifier: "PeopleDetailViewController") as? PeopleDetailViewController
+                let personViewController = storyboard?.instantiateViewController(withIdentifier: peopleDetailViewCtrlIdentifier) as? PeopleDetailViewController
                 personViewController?.selectedPerson = selectedPerson
                 personViewController?.viewModel = viewModel
                 personViewController?.isDisplayedInCompactView = true
                 navigationController?.pushViewController(personViewController!, animated: true)
             } else {
-                let personViewController = storyboard?.instantiateViewController(withIdentifier: "PeopleDetailViewController") as? PeopleDetailViewController
+                let personViewController = storyboard?.instantiateViewController(withIdentifier: peopleDetailViewCtrlIdentifier) as? PeopleDetailViewController
                 personViewController?.isDisplayedInCompactView = false
                 delegate?.didSelect(person: selectedPerson!, viewModel: viewModel)
             }

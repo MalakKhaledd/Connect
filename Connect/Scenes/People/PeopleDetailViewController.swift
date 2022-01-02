@@ -66,11 +66,6 @@ class PeopleDetailViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.tintColor = .white
-    }
-    
     // MARK: - Private functions
     
     private func configureViews() {
